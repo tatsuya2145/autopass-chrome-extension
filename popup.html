@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="invalid" hidden>
+    <p>無効</p>
+  </div>
+  <div id="accounts" class="p-4">
+      <table class="border-separate border-spacing-2 border">
+        <tbody>
+          <tr class="whitespace-nowrap">
+            <td class="text-center">
+              <label>ログインID</label>
+            </td>
+            <td>
+              <input id="login_id" type="text" class="text-base border" readOnly>
+            </td>
+            <td>
+              <button data-id="login_id" class="copy py-2 px-4 rounded text-white bg-indigo-500 hover:bg-indigo-700">
+                コピー
+              </button>
+            </td>
+          </tr>
+          <tr class="whitespace-nowrap">
+            <td class="text-center"> 
+              <label>パスワード</label>
+            </td>
+            <td>
+              <input id="password" type="password" class="text-base border" readonly>
+            </td>
+            <td>
+              <button data-id="password" class="copy py-2 px-4 rounded text-white bg-indigo-500 hover:bg-indigo-700">
+                コピー
+              </button>
+            </td>
+          </tr>
+          <tr class="whitespace-nowrap">
+            <td class="text-center">
+              <label>備考</label>
+            </td>
+            <td colspan="2">
+              <textarea id="description" type="text"  class="text-base border h-32 w-full" readOnly></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex justify-center m-4">
+        <button id="autoinput" class="py-2 px-4 rounded text-white bg-green-600 hover:bg-green-800">
+          自動入力
+        </button>
+      </div>
+      <div class="flex justify-between">
+        <button id="prev" class="flex items-center justify-center rounded-md border text-base hover:border-indigo-500 p-2 w-9 h-9">
+          前
+        </button>
+        <span id="page" class="flex items-center text-base"></span>
+        <button id="next" class="flex items-center justify-center rounded-md border text-base hover:border-indigo-500 p-2 w-9 h-9">
+          次
+        </button>
+      </div>
+  </div>
+<script src="./js/popup.js"></script>  
+
+</body>
+</html>

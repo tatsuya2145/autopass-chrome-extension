@@ -1,0 +1,25 @@
+{
+  "description": "各種Webサービスで用いているID・パスワードを自動入力します。",
+  "version":"0.0.1",
+  "manifest_version": 3,
+  "name":"AutoPass",
+  "icons":{
+    "16":"icon.png",
+    "32":"icon.png",
+    "48":"icon.png",
+    "128":"icon.png"    
+  },
+  "background":{
+    "service_worker":"js/background.js"
+  },
+  "action":{
+    "default_icon":"icon.png",
+    "default_popup":"popup.html"
+  },
+  "content_scripts":[{
+    "matches":["http://*/*","https://*/*","<all_urls>"],
+    "js":["js/content_script.js"],
+    "all_frames":true
+    }],
+  "permissions":["storage","tabs","activeTab"]
+}
